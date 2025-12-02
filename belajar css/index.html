@@ -1,59 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <!-- cara memanggil external css -->
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!-- internal css -->
-     <style>
-        /* code untuk membuat style css */
-        *{
-            padding: 0;
-            margin: 0;
-        }
+    <style>
+      /* code untuk membuat style css */
+      * {
+        padding: 0;
+        margin: 0;
+      }
 
-        .container{
-            width: 90dvw;
-            min-height: 30dvw;
-            border: 0.5px #4444 solid;
-            padding: 10px;
-            margin: 20px;
-            color: #0088cc;
-        }
+      .container {
+        width: 90dvw;
+        min-height: 30dvw;
+        border: 0.5px #4444 solid;
+        padding: 10px;
+        margin: 20px;
+        color: #0088cc;
+      }
 
-        .sub-judul{
-            margin-top: 20px;
-            font-size: 1.3rem;
-        }
+      .sub-judul {
+        margin-top: 20px;
+        font-size: 1.3rem;
+      }
 
-        .weight{
-            font-weight: 900;
-        }
+      .weight {
+        font-weight: 900;
+      }
 
-        .align{
-            text-align: right;
-        }
+      .align {
+        text-align: right;
+      }
 
-        .radius{
-            border-radius: 16px;
-        }
-        
+      .radius {
+        border-radius: 16px;
+      }
 
-     </style>
+      .card {
+        width: 30%;
+        margin: 20px 5px;
+        padding: 20px;
+        background-color: #d4d4d4;
+      }
 
-</head>
-<body>
+      .container .card:nth-child(odd) {
+        background-color: #4a4a4aaa;
+      }
 
+      .display-block {
+        display: block;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
     <div class="container radius">
-        <h1>Hallo saya belajar css</h1>
-        <p class="sub-judul weight align ">Hari ini okelah</p>
+      <h1>Hallo saya belajar css</h1>
+      <p class="sub-judul weight align">Hari ini okelah</p>
     </div>
 
-    
+    <div class="container">
+      <h2>Display Block 🎯</h2>
 
-</body>
+      <div class="">
+        <div class="card">
+          <p>Ini adalah Card Block</p>
+        </div>
+        <span class="card display-block"> Ini Card 1 </span>
+        <span class="card display-block"> Ini Card 2 </span>
+        <span class="card display-block"> Ini card 3 </span>
+      </div>
+    </div>
+  </body>
 </html>
