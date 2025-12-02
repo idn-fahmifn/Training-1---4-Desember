@@ -67,6 +67,82 @@
       .display-inline-block {
         display: inline-block;
       }
+
+      .btn {
+        display: block;
+        background-color: #6ba9ff;
+        padding: 10px;
+        margin-top: 20px;
+        text-align: center;
+        color: #ffff;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.7s;
+      }
+
+      .btn:hover {
+        background: #00265c40;
+      }
+
+      .position-relative {
+        position: relative;
+      }
+
+      .badge-promo {
+        background-color: #ff3300;
+        color: #ffff;
+        padding: 10px 20px;
+        border-radius: 16px 0 0 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* absolute pindah ketika parent bukan relative */
+      }
+
+      .btn-react{
+        border: #4444 0.5px solid;
+        padding: 30px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 100%;
+      }
+
+      .position-sticky{
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      .display-flex{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+      .card-flex{
+        padding: 30px;
+        border: 1px #4444 solid;
+        margin: 20px 0;
+        /* basis 200px, shrink 1, grow 1 */
+        flex: 1 1 300px; 
+      }
+
+      .display-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .card-grid{
+        background-color: #6ba9ff;
+        padding: 30px;
+        color: #ffff;
+      }
+
+
     </style>
   </head>
   <body>
@@ -128,6 +204,10 @@
     </div>
 
     <div class="container">
+        <h1>Position Sticky 🎯 </h1>
+    </div>
+
+    <div class="container">
       <h2>Display None 🙅🏻</h2>
 
       <div class="">
@@ -151,9 +231,71 @@
       <p>Pindah dari posisi aslinya.</p>
       <div class="">
         <div class="card">Card 1</div>
-        <div class="card" style="position: relative; left: 30px; top: 100px;">Card 2</div>
+        <div class="card" style="position: relative; left: 30px; top: 100px">
+          Card 2
+        </div>
         <div class="card">Card 3</div>
       </div>
+
     </div>
+
+    <div class="container">
+      <div class="card position-relative">
+        <h4>Produk 1</h4>
+        <p style="margin-top: 20px">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab possimus
+          nam, saepe fugit similique consectetur incidunt et dolorem pariatur
+          vero.
+        </p>
+        <a href="" class="btn">Beli</a>
+        <span class="badge-promo">PROMO 🔥</span>
+      </div>
+      <div class="card position-relative">
+        <h4>Produk 1</h4>
+        <p style="margin-top: 20px">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab possimus
+          nam, saepe fugit similique consectetur incidunt et dolorem pariatur
+          vero.
+        </p>
+        <a href="" class="btn">Beli</a>
+        <span class="badge-promo">PROMO 🔥</span>
+      </div>
+    </div>
+
+    <!-- fixed -->
+    <a href="" class="btn-react"> 🌹 </a>
+
+    <div class="container">
+        <h1>Flexbox ◻️</h1>
+        <p>Layout modern dari css</p>
+
+        <div class="display-flex">
+            <div class="card-flex">Card 1</div>
+            <div class="card-flex">Card 2</div>
+            <div class="card-flex">Card 3</div>
+            <div class="card-flex">Card 4</div>
+            <div class="card-flex">Card 5</div>
+            <div class="card-flex">Card 6</div>
+            <div class="card-flex">Card 7</div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h2>Grid Layout ⏹️</h2>
+        <div class="display-grid">
+            <div class="card-grid">Card 1</div>
+            <div class="card-grid">Card 2</div>
+            <div class="card-grid">Card 3</div>
+            <div class="card-grid">Card 4</div>
+            <div class="card-grid">Card 5</div>
+            <div class="card-grid">Card 6</div>
+            <div class="card-grid">Card 7</div>
+        </div>
+
+
+    </div>
+
+
   </body>
 </html>
