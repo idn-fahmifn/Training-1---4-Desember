@@ -86,6 +86,7 @@
 
       .position-relative {
         position: relative;
+        animation: bounce 2s infinite alternate;
       }
 
       .badge-promo {
@@ -99,7 +100,7 @@
         /* absolute pindah ketika parent bukan relative */
       }
 
-      .btn-react{
+      .btn-react {
         border: #4444 0.5px solid;
         padding: 30px;
         position: fixed;
@@ -108,41 +109,87 @@
         border-radius: 100%;
       }
 
-      .position-sticky{
+      .position-sticky {
         background-color: #fff;
         position: sticky;
         top: 0;
         z-index: 1;
       }
 
-      .display-flex{
+      .display-flex {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
       }
-      .card-flex{
+      .card-flex {
         padding: 30px;
         border: 1px #4444 solid;
         margin: 20px 0;
         /* basis 200px, shrink 1, grow 1 */
-        flex: 1 1 300px; 
+        flex: 1 1 300px;
       }
 
-      .display-grid{
+      .display-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
       }
 
-      .card-grid{
+      .card-grid {
         background-color: #6ba9ff;
         padding: 30px;
         color: #ffff;
+        animation: changeColor 2s infinite alternate;
       }
 
+      @keyframes bounce {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-100px);
+        }
+      }
 
+      @keyframes changeColor {
+        0%{
+            background-color: #ff3300;
+        }
+        25%{
+            background-color: #0088cc;
+        }
+        50%{
+            background-color: #ffd500;
+        }
+        75%{
+            background-color: #00ff11;
+        }
+        100%{
+            background-color: #00b3ff;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .card-grid {
+          background-color: #ff3300;
+        }
+
+        .display-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 425px) {
+        .card-grid {
+          background-color: #ff3300;
+        }
+
+        .display-grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -204,7 +251,7 @@
     </div>
 
     <div class="container">
-        <h1>Position Sticky 🎯 </h1>
+      <h1>Position Sticky 🎯</h1>
     </div>
 
     <div class="container">
@@ -236,7 +283,6 @@
         </div>
         <div class="card">Card 3</div>
       </div>
-
     </div>
 
     <div class="container">
@@ -266,36 +312,31 @@
     <a href="" class="btn-react"> 🌹 </a>
 
     <div class="container">
-        <h1>Flexbox ◻️</h1>
-        <p>Layout modern dari css</p>
+      <h1>Flexbox ◻️</h1>
+      <p>Layout modern dari css</p>
 
-        <div class="display-flex">
-            <div class="card-flex">Card 1</div>
-            <div class="card-flex">Card 2</div>
-            <div class="card-flex">Card 3</div>
-            <div class="card-flex">Card 4</div>
-            <div class="card-flex">Card 5</div>
-            <div class="card-flex">Card 6</div>
-            <div class="card-flex">Card 7</div>
-        </div>
-
+      <div class="display-flex">
+        <div class="card-flex">Card 1</div>
+        <div class="card-flex">Card 2</div>
+        <div class="card-flex">Card 3</div>
+        <div class="card-flex">Card 4</div>
+        <div class="card-flex">Card 5</div>
+        <div class="card-flex">Card 6</div>
+        <div class="card-flex">Card 7</div>
+      </div>
     </div>
 
     <div class="container">
-        <h2>Grid Layout ⏹️</h2>
-        <div class="display-grid">
-            <div class="card-grid">Card 1</div>
-            <div class="card-grid">Card 2</div>
-            <div class="card-grid">Card 3</div>
-            <div class="card-grid">Card 4</div>
-            <div class="card-grid">Card 5</div>
-            <div class="card-grid">Card 6</div>
-            <div class="card-grid">Card 7</div>
-        </div>
-
-
+      <h2>Grid Layout ⏹️</h2>
+      <div class="display-grid">
+        <div class="card-grid">Card 1</div>
+        <div class="card-grid">Card 2</div>
+        <div class="card-grid">Card 3</div>
+        <div class="card-grid">Card 4</div>
+        <div class="card-grid">Card 5</div>
+        <div class="card-grid">Card 6</div>
+        <div class="card-grid">Card 7</div>
+      </div>
     </div>
-
-
   </body>
 </html>
