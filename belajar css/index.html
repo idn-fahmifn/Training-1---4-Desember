@@ -23,6 +23,7 @@
         padding: 10px;
         margin: 20px;
         color: #0088cc;
+        border-radius: 16px;
       }
 
       .sub-judul {
@@ -39,7 +40,7 @@
       }
 
       .radius {
-        border-radius: 16px;
+        border-radius: 8px;
       }
 
       .card {
@@ -50,12 +51,21 @@
       }
 
       .container .card:nth-child(odd) {
-        background-color: #4a4a4aaa;
+        background-color: #6ba9ff;
       }
 
       .display-block {
         display: block;
         height: 50px;
+      }
+
+      .display-inline {
+        display: inline;
+        margin: 0 20px;
+      }
+
+      .display-inline-block {
+        display: inline-block;
       }
     </style>
   </head>
@@ -75,6 +85,74 @@
         <span class="card display-block"> Ini Card 1 </span>
         <span class="card display-block"> Ini Card 2 </span>
         <span class="card display-block"> Ini card 3 </span>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Display Inline ▇ ▆ 🟧 🟧</h2>
+      <div class="" style="padding: 30px 0">
+        <div class="card display-inline">
+          Lorem ipsum dolor sit amet elit. Vel distinctio explicabo iste,
+          adipisci perferendis ratione! Natus eum quasi necessitatibus
+          laboriosam?
+        </div>
+        <div class="card display-inline">elemen 2</div>
+        <div class="card display-inline">elemen 3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Display Inline Block 🟧 🟧</h2>
+      <div class="">
+        <div class="card display-inline-block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, nobis
+          ab dolores labore sed inventore dolorem error similique fugiat
+          explicabo?
+        </div>
+        <div class="card display-inline-block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          dolores magni facilis quaerat iste odit sit obcaecati, recusandae illo
+          facere nobis repellat! Amet tempore aperiam pariatur. Sapiente nam
+          animi vel?
+        </div>
+        <div class="card display-inline-block">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aut
+          exercitationem. Praesentium maiores nam neque perferendis commodi.
+          Esse, molestias quaerat qui laborum nemo adipisci culpa dolorem iusto
+          enim ipsum temporibus tenetur animi fugit ex officia quasi rem dicta
+          excepturi sed perferendis ducimus? Repellat velit commodi mollitia
+          harum cum in temporibus.
+        </div>
+        <div class="card display-inline-block">elemen 3</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Display None 🙅🏻</h2>
+
+      <div class="">
+        <div class="card">Card 1</div>
+        <div class="card" style="display: none">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+      </div>
+
+      <h2>Visiblity Hidden 🙈</h2>
+      <div class="">
+        <div class="card">Card 1</div>
+        <div class="card" style="visibility: hidden">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Position Relative</h2>
+      <p>Pindah dari posisi aslinya.</p>
+      <div class="">
+        <div class="card">Card 1</div>
+        <div class="card" style="position: relative; left: 30px; top: 100px;">Card 2</div>
+        <div class="card">Card 3</div>
       </div>
     </div>
   </body>
