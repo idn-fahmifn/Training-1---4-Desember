@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+    <button type="button" onclick="klik()"></button>
+
+
+
+    <script>
+      console.log("hello world");
+      // alert("Kamu sedang belajar js")
+
+      // variabel dan tipe data
+      // Variable : let & const
+
+      let nama = `Fahmi`;
+      console.log(nama);
+
+      const alamat = "Jakarta Barat";
+      console.log(typeof alamat);
+
+      const angka = 0.5;
+      console.log(Number(nama) + angka);
+
+      let isMakan = true;
+      console.log(typeof isMakan);
+
+      let buat;
+      console.log(typeof buat);
+
+      let kosong = null;
+      console.log(typeof kosong);
+
+      let biodata = {
+        nama: "Fahmi Nuradi",
+        alamat: "Jakarta Barat",
+        pekerjaan: "ternak lele",
+        pendidikan: {
+          jenjang: "Sarjana",
+          jurusan: "Teknik Informatika",
+          tugas_akhir: {
+            judul_skripsi: "Berlomba dalam kebaikan",
+            dosbing: "Prof. Asep, M.Kom",
+          },
+        },
+      };
+
+      let saya = "hallo" + biodata.nama;
+      console.log(saya);
+
+      let buah = ["jeruk", "nanas", "Alpukat", "apel"];
+      console.log(buah[1]);
+
+      // operator aritmatika
+      let angka1 = 12;
+      let angka2 = 3;
+
+      console.log(angka1 + angka2);
+      console.log(angka1 - angka2); //70
+      console.log(angka1 * angka2); //3000
+      console.log(angka1 / angka2); //3000
+      console.log(angka1 % angka2); //1
+      console.log(angka1 ** angka2); //1
+
+      // operator penugasan
+      let awal = 15;
+      awal += 3; //15
+      console.log(awal);
+
+      awal -= 10;
+      console.log(awal);
+
+      //   operator Perbandingan
+      angka1 = 15;
+      angka2 = 16;
+      let angka3 = "17";
+      let angka4 = 17;
+
+      //
+      console.log(angka1 == angka4);
+      console.log(Number(angka3) === String(angka4)); //sama dengan nilai & tipe data.
+
+      console.log(angka3 != angka4); //true
+      console.log(angka3 !== angka4); //true
+
+      console.log(angka3 >= angka4);
+
+      // Operator Logika
+      // && and = keduanya true = true
+      // || or = salah satu bernilai true = true
+      // ! NOT = nilai kebalikan = fahmi -> !fahmi
+
+      let gajian = true;
+      let libur = false;
+      let hiling = false;
+      let nabung = false;
+
+      console.log(gajian && libur); //false
+      console.log(gajian && !libur); //true
+      console.log(libur && hiling);
+
+      console.log(gajian || libur); //
+      console.log(!gajian || libur); //
+
+      // let umur = prompt('Berapa usia kamu?');
+      // let hasil = (umur >= 17) ? alert("Kamu bisa bikin SIM") : alert('Kamu belum bisa bikin sim')
+
+      console.log(gajian * angka2);
+
+      // kondisi :
+      // if-else statement || switch
+
+      let nilai = 30;
+
+      if (nilai >= 60 && nilai <= 70) {
+        console.log("Nilai kamu C");
+      } else if (nilai > 70 && nilai <= 85) {
+        console.log("Nilai kamu B");
+      } else if (nilai > 85 && nilai <= 100) {
+        console.log("Nilai kamu A");
+      } else if (nilai > 100) {
+        console.log("Nilai terlalu berlebihan");
+      } else if (nilai >= 0 && nilai < 60) {
+        console.log("Anda Tidak Lulus");
+      } else {
+        console.log("Nilai salah.");
+      }
+
+      let day = 'selasa';
+
+      switch (day.toLocaleLowerCase()) {
+        case "senin":
+          console.log("Hari males kerja");
+          break;
+        case "selasa":
+          console.log("Makan Makan");
+          break;
+        case "rabu":
+          console.log("Mulai semangat kerja");
+          break;
+        case "kamis":
+          console.log("kerja semangat");
+          break;
+        case "jumat":
+          console.log("Semangat karena besok libur");
+          break;
+        case "sabtu", "minggu":
+          console.log("yeay libur");
+          break;
+        default:
+          console.log("Hari ga ngerti, udah cuti aja");
+          break;
+      }
+
+    //   looping perulangan
+    for(let i = 1; i <= 10; i++){
+        console.log("saya mengulang..", i)
+    }
+
+    for(let i = 10; i >= 1; i--){
+        console.log("Hitung mundur..", i)
+    }
+
+    let mobil = ['kijang', 'avanza', 'xenia', 'mclaren']
+    mobil.push('Pajero')
+    mobil.push('L300') //menambah nilai array dari belakan, jika menghapus pake pop()
+    mobil.shift() // menghapus nilai array depan, menambahkannya pake unshift
+
+    for(let i = 0; i < mobil.length; i++){
+        console.log('Saya punya mobil, ' + mobil[i])
+    }
+
+
+    // looping dengan while
+    let username = 0
+    // while (username !== "fahmi") {
+    //     username = prompt('Masukan username kamu..')
+    // }
+    // console.log('Username sudah sesuai');
+
+    // loop modern dengan in dan of
+    for(const bio in biodata){
+        console.log(`${bio} = ${biodata[bio]} `)
+    }
+
+    for(const car of mobil){
+        console.log(car)
+    }
+
+    function klik(){
+        alert('Tombol di click!')
+    }
+
+    function hai(waktu, nama){
+        console.log(`Selamat, ${waktu}, Akang/Teteh ${nama}`)
+    }
+    hai('pagi', 'Asep')
+
+    // function expression
+    let persegiPanjang = function(panjang, lebar){
+        return panjang * lebar;
+    }
+
+    let luasPersegiPanjang = persegiPanjang(20, 10)
+    console.log(`Luas persegi panjang adalah : ${luasPersegiPanjang}`)
+
+    // arrow function
+    let persegi = (sisi) => sisi * sisi
+    console.log('Luas persegi adalah ' + persegi(20))
+
+
+
+
+    </script>
+  </body>
+</html>
