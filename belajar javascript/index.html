@@ -6,7 +6,8 @@
     <title>Document</title>
   </head>
   <body>
-    <button type="button" onclick="klik()"></button>
+    <button type="button" onclick="klik()">klik</button>
+    <button type="button" onclick="matematika()">mari berhitung</button>
 
     <script>
       console.log("hello world");
@@ -247,7 +248,7 @@
 
         switch (operator) {
           case "+":
-            hasil = penjumlahan(input1, input2);
+            hasil = penjumlahan(Number(input1), Number(input2));
             break;
           case "-":
             hasil = pengurangan(input1, input2);
