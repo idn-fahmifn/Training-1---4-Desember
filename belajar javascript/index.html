@@ -6,11 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-
-
     <button type="button" onclick="klik()"></button>
-
-
 
     <script>
       console.log("hello world");
@@ -132,7 +128,7 @@
         console.log("Nilai salah.");
       }
 
-      let day = 'selasa';
+      let day = "selasa";
 
       switch (day.toLocaleLowerCase()) {
         case "senin":
@@ -150,7 +146,7 @@
         case "jumat":
           console.log("Semangat karena besok libur");
           break;
-        case "sabtu", "minggu":
+        case ("sabtu", "minggu"):
           console.log("yeay libur");
           break;
         default:
@@ -158,65 +154,116 @@
           break;
       }
 
-    //   looping perulangan
-    for(let i = 1; i <= 10; i++){
-        console.log("saya mengulang..", i)
-    }
+      //   looping perulangan
+      for (let i = 1; i <= 10; i++) {
+        console.log("saya mengulang..", i);
+      }
 
-    for(let i = 10; i >= 1; i--){
-        console.log("Hitung mundur..", i)
-    }
+      for (let i = 10; i >= 1; i--) {
+        console.log("Hitung mundur..", i);
+      }
 
-    let mobil = ['kijang', 'avanza', 'xenia', 'mclaren']
-    mobil.push('Pajero')
-    mobil.push('L300') //menambah nilai array dari belakan, jika menghapus pake pop()
-    mobil.shift() // menghapus nilai array depan, menambahkannya pake unshift
+      let mobil = ["kijang", "avanza", "xenia", "mclaren"];
+      mobil.push("Pajero");
+      mobil.push("L300"); //menambah nilai array dari belakan, jika menghapus pake pop()
+      mobil.shift(); // menghapus nilai array depan, menambahkannya pake unshift
 
-    for(let i = 0; i < mobil.length; i++){
-        console.log('Saya punya mobil, ' + mobil[i])
-    }
+      for (let i = 0; i < mobil.length; i++) {
+        console.log("Saya punya mobil, " + mobil[i]);
+      }
 
+      // looping dengan while
+      let username = 0;
+      // while (username !== "fahmi") {
+      //     username = prompt('Masukan username kamu..')
+      // }
+      // console.log('Username sudah sesuai');
 
-    // looping dengan while
-    let username = 0
-    // while (username !== "fahmi") {
-    //     username = prompt('Masukan username kamu..')
-    // }
-    // console.log('Username sudah sesuai');
+      // loop modern dengan in dan of
+      for (const bio in biodata) {
+        console.log(`${bio} = ${biodata[bio]} `);
+      }
 
-    // loop modern dengan in dan of
-    for(const bio in biodata){
-        console.log(`${bio} = ${biodata[bio]} `)
-    }
+      for (const car of mobil) {
+        console.log(car);
+      }
 
-    for(const car of mobil){
-        console.log(car)
-    }
+      function klik() {
+        alert("Tombol di click!");
+      }
 
-    function klik(){
-        alert('Tombol di click!')
-    }
+      function hai(waktu, nama) {
+        console.log(`Selamat, ${waktu}, Akang/Teteh ${nama}`);
+      }
+      hai("pagi", "Asep");
 
-    function hai(waktu, nama){
-        console.log(`Selamat, ${waktu}, Akang/Teteh ${nama}`)
-    }
-    hai('pagi', 'Asep')
-
-    // function expression
-    let persegiPanjang = function(panjang, lebar){
+      // function expression
+      let persegiPanjang = function (panjang, lebar) {
         return panjang * lebar;
-    }
+      };
 
-    let luasPersegiPanjang = persegiPanjang(20, 10)
-    console.log(`Luas persegi panjang adalah : ${luasPersegiPanjang}`)
+      let luasPersegiPanjang = persegiPanjang(20, 10);
+      console.log(`Luas persegi panjang adalah : ${luasPersegiPanjang}`);
 
-    // arrow function
-    let persegi = (sisi) => sisi * sisi
-    console.log('Luas persegi adalah ' + persegi(20))
+      // arrow function
+      let persegi = (sisi) => sisi * sisi;
+      console.log("Luas persegi adalah " + persegi(20));
 
+      // tambah
+      // function expression
 
+      const penjumlahan = function (bil1, bil2) {
+        return bil1 + bil2;
+      };
 
+      // kurang
+      // arrow function
+      const pengurangan = (bil1, bil2) => bil1 - bil2;
 
+      // bagi
+      // function biasa
+      function pembagian(bil1, bil2) {
+        return bil1 / bil2;
+      }
+
+      // kali
+      // function biasa
+      function perkalian(bil1, bil2) {
+        return bil1 * bil2;
+      }
+
+      function matematika() {
+        let input1 = prompt("Masukan bilangan ke-1 ...");
+        let input2 = prompt("Masukan bilangan ke-2 ...");
+
+        // handle ketika ada yang memasukan selain angka.
+        if (isNaN(input1) || isNaN(input2)) {
+          alert("Masukan angka!");
+        }
+
+        let operator = prompt("Masukan operator (+, -, *, /)");
+
+        let hasil;
+
+        switch (operator) {
+          case "+":
+            hasil = penjumlahan(input1, input2);
+            break;
+          case "-":
+            hasil = pengurangan(input1, input2);
+            break;
+          case "*":
+            hasil = perkalian(input1, input2);
+            break;
+          case "/":
+            hasil = pembagian(input1, input2);
+            break;
+          default:
+            hasil = "Operator tidak dikenal";
+            break;
+        }
+        alert(`Hasil dari ${input1} ${operator} ${input2} = ${hasil}`)
+      }
     </script>
   </body>
 </html>
