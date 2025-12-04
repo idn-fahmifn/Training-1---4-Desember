@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 90dvw;
+            min-height: 30dvh;
+            border: 0.5px #4444 solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Saya Belajar Javascript</h1>
+        <p id="sub-title">Ini adalah text default, Belum ada perubahan..</p>
+        <img src="" alt="" id="gambar">
+        <div class="" id="newElemen"></div>
+        <div class="" id="elemenBaru"></div>
+    </div>
+
+
+    <script>
+
+        const judul = document.getElementById('title')
+        const newElemen = document.getElementById('newElemen')
+        const elemenBaru = document.getElementById('elemenBaru')
+        const image = document.getElementById('gambar')
+
+        // Manipulasi : 
+        judul.textContent = "Elemen ini sudah diubah oleh DOM."
+        newElemen.innerHTML = `<h1>Hallo ini adalah elemen baru</h1>`
+
+        image.setAttribute('src', 'https://www.shutterstock.com/image-photo/on-white-background-buttons-used-260nw-2048122016.jpg')
+        image.setAttribute('alt', 'contoh_gambar')
+        image.setAttribute('width', 300)
+
+        judul.style.color = '#0088cc'
+
+        const tambahElemen = document.createElement('p')
+        tambahElemen.textContent = "Ini adalah elemen tambahan"
+        console.log(tambahElemen)
+
+        elemenBaru.appendChild(tambahElemen)
+
+
+
+        
+
+
+
+    </script>
+
+</body>
+</html>
