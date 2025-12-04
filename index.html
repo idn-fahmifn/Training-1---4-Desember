@@ -1,178 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple UI Bootstrap</title>
 
     <!-- import css bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <style>
-        .bg-pink {
-            background-color: #850e35;
-        }
+      .bg-pink {
+        background-color: #850e35;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- area navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-pink bg-gradient">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">
-                        Search
-                    </button>
-                </form>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
     <!-- end area navbar -->
     <section id="hero">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="height: 60dvh">
-                <h2 data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="1000">
-                    Belajar With Fahmi
-                </h2>
-                <p class="mt-4 text-center" data-aos="fade-up" data-aos-anchor-placement="top-center"
-                    data-aos-delay="1500">
-                    "Unlock Your Potential! Pelajari cara mencapai tujuan Anda dengan
-                    kursus online ini! Dapatkan pengetahuan dan keterampilan yang
-                    dibutuhkan untuk sukses, dengan topik-topik menarik dan dukungan
-                    dari instruktur yang berpengalaman. Mulai sekarang dan capai impian
-                    Anda!"
-                </p>
-                <a href="#" class="btn bg-pink text-white mt-4" data-aos="fade-up"
-                    data-aos-anchor-placement="top-center" data-aos-delay="2000">Mulai Belajar</a>
-            </div>
+      <div class="container">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+          style="height: 60dvh"
+        >
+          <h2
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay="1000"
+          >
+            Belajar With Fahmi
+          </h2>
+          <p
+            class="mt-4 text-center"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay="1500"
+          >
+            "Unlock Your Potential! Pelajari cara mencapai tujuan Anda dengan
+            kursus online ini! Dapatkan pengetahuan dan keterampilan yang
+            dibutuhkan untuk sukses, dengan topik-topik menarik dan dukungan
+            dari instruktur yang berpengalaman. Mulai sekarang dan capai impian
+            Anda!"
+          </p>
+          <a
+            href="#"
+            class="btn bg-pink text-white mt-4"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+            data-aos-delay="2000"
+            >Mulai Belajar</a
+          >
         </div>
+      </div>
     </section>
 
-    <section id="about" class="bg-opacity-50" style="background-color: #850e3650">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-evenly py-4" style="min-height: 60dvh; width: 100%;">
-                <h2>
-                    Kenapa harus bersama Fahmi?
-                </h2>
+    <section
+      id="about"
+      class="bg-opacity-50"
+      style="background-color: #850e3650"
+    >
+      <div class="container">
+        <div
+          class="d-flex flex-column align-items-center justify-content-evenly py-4"
+          style="min-height: 60dvh; width: 100%"
+        >
+          <h2>Kenapa harus bersama Fahmi?</h2>
 
-                <div class="row" style="width: 100%;">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card p-2 m-1" style="min-height: 200px; width: 100%;"> 
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h5>🕘 Flexibilitas Waktu</h5>
-                                </div>
-                                <p>Belajar kapan saja, di mana saja, dan dengan kecepatanmu sendiri.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                         <div class="card p-2 m-1" style="min-height: 200px; width: 100%;"> 
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h5>👨🏻‍🏫 Interaksi dengan Instruktur</h5>
-                                </div>
-                                <p>Diskusi dengan instruktur yang berpengalaman dan ahli di bidangnya.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                         <div class="card p-2 m-1" style="min-height: 200px; width: 100%;"> 
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h5>📖 Akses ke Materi Pembelajaran</h5>
-                                </div>
-                                <p>Dapatkan akses ke materi pembelajaran yang lengkap dan terstruktur.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                         <div class="card p-2 m-1" style="min-height: 200px; width: 100%;"> 
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h5>🏠 Komunitas Belajar</h5>
-                                </div>
-                                <p>Bergabung dengan komunitas belajar yang aktif dan mendukung.</p>
-                            </div>
-                        </div>
-                    </div>
+          <div class="row" style="width: 100%">
+            <div class="col-md-6 col-lg-3">
+              <div class="card p-2 m-1" style="min-height: 200px; width: 100%">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5>🕘 Flexibilitas Waktu</h5>
+                  </div>
+                  <p>
+                    Belajar kapan saja, di mana saja, dan dengan kecepatanmu
+                    sendiri.
+                  </p>
                 </div>
-                
+              </div>
             </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card p-2 m-1" style="min-height: 200px; width: 100%">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5>👨🏻‍🏫 Interaksi dengan Instruktur</h5>
+                  </div>
+                  <p>
+                    Diskusi dengan instruktur yang berpengalaman dan ahli di
+                    bidangnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card p-2 m-1" style="min-height: 200px; width: 100%">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5>📖 Akses ke Materi Pembelajaran</h5>
+                  </div>
+                  <p>
+                    Dapatkan akses ke materi pembelajaran yang lengkap dan
+                    terstruktur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card p-2 m-1" style="min-height: 200px; width: 100%">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5>🏠 Komunitas Belajar</h5>
+                  </div>
+                  <p>
+                    Bergabung dengan komunitas belajar yang aktif dan mendukung.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-
 
     <section id="trainer">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-evenly py-4" style="min-height: 60dvh; width: 100%;"">
-                <h2>Mentor Kami</h2>
+      <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-evenly
+        py-4" style="min-height: 60dvh; width: 100%;"">
+        <h2>Mentor Kami</h2>
 
-                <div class="row" id="data-trainer">
-                    <div class="col-md-2 col-lg-3 mt-1">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <img src="https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/10.jpg" class="img-fluid rounded" alt="avatar">
-                                <div class="area-data d-flex flex-column mt-4">
-                                    <h5>Mochamad Soleh</h5>
-                                    <span class="fw-bold">Software Engineer</span>
-                                    <span class="text-danger">@tokopaedi</span>
-                                    <a href="#" class="btn btn-danger bg-gradient mt-4">Hubungi</a>
-                                </div>
+        <div class="row" id="data-trainer">
+          <span>Memuat data trainer ...</span>
+
+          <!-- <div class="col-md-6 col-lg-3 mt-1">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img src="https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/10.jpg"
+                                class="img-fluid rounded" alt="avatar" />
+                            <div class="area-data d-flex flex-column mt-4">
+                                <h5>Mochamad Soleh</h5>
+                                <span class="fw-bold">Software Engineer</span>
+                                <span class="text-danger">@tokopaedi</span>
+                                <a href="#" class="btn btn-danger bg-gradient mt-4">Hubungi</a>
                             </div>
                         </div>
                     </div>
-                </div>
-
-            </div>
-
+                </div> -->
         </div>
+      </div>
     </section>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
-</body>
 
+    <script>
+      const trainer = document.getElementById("data-trainer");
+
+      //   function mengambil data
+
+      async function loadDatatrainer() {
+
+        try {
+            // proses yang diharapkan berhasil
+
+            // ambil data dari API
+            const api = await fetch('https://693110c411a8738467cd1915.mockapi.io/users')
+
+            // Handle respon jika gagal.
+            if(!api.ok) {
+                throw new Error('Data gagal diambil.')
+            }
+
+            // convert data dari JSON ke Array Of Object
+            const users = await api.json();
+
+            console.log(users)
+
+
+        } catch (error) {
+            // respon jika gagal
+        }
+
+      }
+
+      loadDatatrainer()
+
+
+    </script>
+  </body>
 </html>
