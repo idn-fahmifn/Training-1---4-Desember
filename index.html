@@ -229,54 +229,58 @@
       //   function mengambil data
 
       async function loadDatatrainer() {
-
         try {
-            // proses yang diharapkan berhasil
+          // proses yang diharapkan berhasil
 
-            // ambil data dari API
-            const api = await fetch('https://693110c411a8738467cd1915.mockapi.io/users')
+          // ambil data dari API
+          const api = await fetch(
+            "https://693110c411a8738467cd1915.mockapi.io/users"
+          );
 
-            // Handle respon jika gagal.
-            if(!api.ok) {
-                throw new Error('Data gagal diambil.')
-            }
+          // Handle respon jika gagal.
+          if (!api.ok) {
+            throw new Error("Data gagal diambil.");
+          }
 
-            // convert data dari JSON ke Array Of Object
-            const users = await api.json();
+          // convert data dari JSON ke Array Of Object
+          const users = await api.json();
 
-            trainer.innerHTML = ''
+          trainer.innerHTML = "";
 
-            users.forEach(item => {
-                const column = document.createElement('div')
-                column.setAttribute('class', 'col-md-6 col-lg-3 mt-1')
+          users.forEach((item) => {
+            const column = document.createElement("div");
+            column.setAttribute("class", "col-md-6 col-lg-3 mt-1");
 
-                const card = document.createElement('div')
-                card.setAttribute('class', 'card')
+            const card = document.createElement("div");
+            card.setAttribute("class", "card");
 
+            card.innerHTML = `
+                
+                <div class="card-body text-center">
+                            <img src="${item.image}"
+                                class="img-fluid rounded" alt="avatar" />
+                            <div class="area-data d-flex flex-column mt-4">
+                                <h5>${item.name}</h5>
+                                <span class="fw-bold">${item.job_title}</span>
+                                <span class="text-danger">@${item.company}</span>
+                                <a href="#" class="btn btn-danger bg-gradient mt-4">Hubungi</a>
+                            </div>
+                        </div>
 
-                // tampilkan column di halaman
-                trainer.appendChild(column)
-                column.appendChild(card)
+                `;
 
-                console.log(column)
-
-            })
-
-
-
-
-
-
-
+            // tampilkan column di halaman
+            trainer.appendChild(column);
+            column.appendChild(card);
+          });
         } catch (error) {
-            // respon jika gagal
+          // respon jika gagal
+          console.log("Terdapat Error");
+          trainer.innerHTML = `Gagal Memuat Data`;
         }
-
       }
 
-      loadDatatrainer()
-
-
+      loadDatatrainer();
     </script>
   </body>
 </html>
