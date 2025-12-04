@@ -244,7 +244,28 @@
             // convert data dari JSON ke Array Of Object
             const users = await api.json();
 
-            console.log(users)
+            trainer.innerHTML = ''
+
+            users.forEach(item => {
+                const column = document.createElement('div')
+                column.setAttribute('class', 'col-md-6 col-lg-3 mt-1')
+
+                const card = document.createElement('div')
+                card.setAttribute('class', 'card')
+
+
+                // tampilkan column di halaman
+                trainer.appendChild(column)
+                column.appendChild(card)
+
+                console.log(column)
+
+            })
+
+
+
+
+
 
 
         } catch (error) {
