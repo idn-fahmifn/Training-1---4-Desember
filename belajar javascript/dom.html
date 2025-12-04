@@ -1,63 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <style>
-        .container {
-            width: 90dvw;
-            min-height: 30dvh;
-            border: 0.5px #4444 solid;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+      .container {
+        width: 90dvw;
+        min-height: 30dvh;
+        border: 0.5px #4444 solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
     </style>
+  </head>
 
-</head>
-<body>
+  <body>
     <div class="container">
-        <h1 id="title">Saya Belajar Javascript</h1>
-        <p id="sub-title">Ini adalah text default, Belum ada perubahan..</p>
-        <img src="" alt="" id="gambar">
-        <div class="" id="newElemen"></div>
-        <div class="" id="elemenBaru"></div>
+      <!--  -->
+      <h1 id="title">Saya Belajar Javascript</h1>
+      <p id="sub-title">Ini adalah text default, Belum ada perubahan..</p>
+      <img src="" alt="" id="gambar" />
+      <div class="" id="newElemen"></div>
+      <div class="" id="elemenBaru"></div>
     </div>
 
+    <div class="container">
+      <table class="" style="width: 90%; border-collapse: collapse" border="1">
+        <thead>
+          <th>ID</th>
+          <th>Nama Mahasiswa</th>
+          <th>Nilai</th>
+          <th>Predikat</th>
+        </thead>
+        <tbody id="data"></tbody>
+      </table>
+    </div>
 
     <script>
+      const judul = document.getElementById("title");
+      const newElemen = document.getElementById("newElemen");
+      const elemenBaru = document.getElementById("elemenBaru");
+      const image = document.getElementById("gambar");
 
-        const judul = document.getElementById('title')
-        const newElemen = document.getElementById('newElemen')
-        const elemenBaru = document.getElementById('elemenBaru')
-        const image = document.getElementById('gambar')
+      // Manipulasi :
+      judul.textContent = "Elemen ini sudah diubah oleh DOM.";
+      newElemen.innerHTML = `<h1>Hallo ini adalah elemen baru</h1>`;
 
-        // Manipulasi : 
-        judul.textContent = "Elemen ini sudah diubah oleh DOM."
-        newElemen.innerHTML = `<h1>Hallo ini adalah elemen baru</h1>`
+      image.setAttribute(
+        "src",
+        "https://www.shutterstock.com/image-photo/on-white-background-buttons-used-260nw-2048122016.jpg"
+      );
+      image.setAttribute("alt", "contoh_gambar");
+      image.setAttribute("width", 300);
 
-        image.setAttribute('src', 'https://www.shutterstock.com/image-photo/on-white-background-buttons-used-260nw-2048122016.jpg')
-        image.setAttribute('alt', 'contoh_gambar')
-        image.setAttribute('width', 300)
+      judul.style.color = "#0088cc";
 
-        judul.style.color = '#0088cc'
+      const tambahElemen = document.createElement("p");
+      tambahElemen.textContent = "Ini adalah elemen tambahan";
+      console.log(tambahElemen);
 
-        const tambahElemen = document.createElement('p')
-        tambahElemen.textContent = "Ini adalah elemen tambahan"
-        console.log(tambahElemen)
+      elemenBaru.appendChild(tambahElemen);
 
-        elemenBaru.appendChild(tambahElemen)
+      // pilih elemen id tbody
+      const tbody = document.getElementById("data");
 
+      const mahasiswa = [
+        {
+          id: 1,
+          nama: "Asep",
+          nilai: 40,
+        },
+        {
+          id: 2,
+          nama: "Jajang",
+          nilai: 55,
+        },
+        {
+          id: 3,
+          nama: "Dayat",
+          nilai: 75,
+        },
+        {
+          id: 4,
+          nama: "Michael",
+          nilai: 80,
+        },
+        {
+          id: 5,
+          nama: "Fauzi",
+          nilai: 80,
+        },
+      ];
 
+      
 
-        
+      mahasiswa.forEach(item => {
+        // hasil dari looping, mapping ke tabel
+        const predikat = item.nilai >= 75 ? 'Lulus' : 'Remedial'
+        const loopData = `
+                <tr>
+                    <td>${item.id}</td>
+                    <td>${item.nama}</td>
+                    <td>${item.nilai}</td>
+                    <td>${predikat}</td>
+                </tr>
+        `;
 
+        tbody.innerHTML += loopData
 
+      });
 
+    
     </script>
-
-</body>
+  </body>
 </html>
